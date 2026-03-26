@@ -224,7 +224,7 @@ Example Prediction Input:
 Example Output:
 {
  "churn_prediction": 1,
- "churn_probability": 0.82
+ "churn_probability": 0.90
 }
 
 --------------------------------------
