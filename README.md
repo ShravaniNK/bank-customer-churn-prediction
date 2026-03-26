@@ -151,7 +151,7 @@ Why ROC-AUC?
 
 Because churn prediction is an imbalanced classification problem.
 
-## ROC Curve Analysis
+### ROC Curve Analysis
 
 Receiver Operating Characteristic (ROC) curve is used to evaluate the classification performance of the churn prediction model across different thresholds.
 
@@ -186,7 +186,63 @@ A high ROC-AUC score ensures reliable identification of customers likely to chur
 ![Confusion Matrix](images/confusion_matrix.png)
 --------------------------------------
 
-### 7. Model Deployment
+### Business Recommendations Based on Model insights:
+
+1. Target High-Risk Customers
+   Customers with:
+    Low tenure
+    Low product usage
+    Inactive accounts
+  should receive retention offers.
+
+2. Improve Customer Engagement
+   Inactive members show higher churn probability.
+   Recommended actions:
+    Personalized marketing
+    Loyalty rewards
+
+3. Promote Multi-Product Usage
+   Customers using more products churn less.
+   Recommended actions:
+    Cross-selling strategies
+    Product bundling
+
+4. Monitor High Balance Customers
+   High-balance churners represent major financial risk.
+   Recommended actions:
+    Dedicated customer support
+    VIP services
+
+--------------------------------------
+
+### Technologies Used:
+ Python
+ Pandas
+ NumPy
+ Scikit-learn
+ XGBoost
+ SMOTE
+ FastAPI
+ Uvicorn
+ Matplotlib
+ Seaborn
+
+--------------------------------------
+
+### Key Results:
+ Both Randon Forest and XGBoost models achieved highest ROC-AUC
+ Improved churn detection performance
+ Enabled real-time predictions using API
+
+--------------------------------------
+
+### Future Improvements:
+ Add SHAP model interpretability
+ Deploy to cloud (AWS / Azure)
+ Build interactive dashboard
+ Automate retraining pipeline
+
+ ### 7. Model Deployment
 
 The final XGBoost model was deployed using:
 
@@ -197,7 +253,7 @@ This enables real-time predictions through API calls.
 
 --------------------------------------
 
-## API Usage
+### API Usage
 
 Run API:
 
@@ -228,60 +284,3 @@ Example Output:
 }
 
 --------------------------------------
-
-
-## Business Recommendations Based on Model insights:
-
-1. Target High-Risk Customers
-   Customers with:
-    Low tenure
-    Low product usage
-    Inactive accounts
-  should receive retention offers.
-
-2. Improve Customer Engagement
-   Inactive members show higher churn probability.
-   Recommended actions:
-    Personalized marketing
-    Loyalty rewards
-
-3. Promote Multi-Product Usage
-   Customers using more products churn less.
-   Recommended actions:
-    Cross-selling strategies
-    Product bundling
-
-4. Monitor High Balance Customers
-   High-balance churners represent major financial risk.
-   Recommended actions:
-    Dedicated customer support
-    VIP services
-
---------------------------------------
-
-## Technologies Used:
- Python
- Pandas
- NumPy
- Scikit-learn
- XGBoost
- SMOTE
- FastAPI
- Uvicorn
- Matplotlib
- Seaborn
-
---------------------------------------
-
-## Key Results:
- Both Randon Forest and XGBoost models achieved highest ROC-AUC
- Improved churn detection performance
- Enabled real-time predictions using API
-
---------------------------------------
-
-## Future Improvements:
- Add SHAP model interpretability
- Deploy to cloud (AWS / Azure)
- Build interactive dashboard
- Automate retraining pipeline
