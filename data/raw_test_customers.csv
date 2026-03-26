@@ -1,0 +1,9 @@
+﻿CreditScore,Geography,Gender,Age,Tenure,Balance,NumOfProducts,HasCrCard,IsActiveMember,EstimatedSalary
+580,Germany,Female,45,1,85000,1,1,0,40000
+720,France,Male,35,6,15000,2,1,1,85000
+640,Spain,Male,50,3,60000,2,1,0,60000
+500,Germany,Female,55,2,95000,1,0,0,45000
+760,France,Male,40,8,20000,2,1,1,90000
+610,Spain,Female,30,4,30000,1,1,1,50000
+690,Germany,Male,48,5,70000,2,1,0,75000
+550,France,Female,60,1,80000,1,0,0,35000
