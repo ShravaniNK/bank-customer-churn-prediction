@@ -228,7 +228,9 @@ Example Output:
 }
 
 --------------------------------------
-Business Recommendations Based on Model insights:
+
+
+## Business Recommendations Based on Model insights:
 
 1. Target High-Risk Customers
    Customers with:
@@ -257,7 +259,7 @@ Business Recommendations Based on Model insights:
 
 --------------------------------------
 
-Technologies Used:
+## Technologies Used:
  Python
  Pandas
  NumPy
@@ -271,14 +273,14 @@ Technologies Used:
 
 --------------------------------------
 
-Key Results:
+## Key Results:
  Both Randon Forest and XGBoost models achieved highest ROC-AUC
  Improved churn detection performance
  Enabled real-time predictions using API
 
 --------------------------------------
 
-Future Improvements:
+## Future Improvements:
  Add SHAP model interpretability
  Deploy to cloud (AWS / Azure)
  Build interactive dashboard
