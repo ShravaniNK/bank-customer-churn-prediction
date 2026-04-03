@@ -154,73 +154,68 @@ Business Impact: A high ROC-AUC score ensures reliable identification of custome
 
 ### Business Recommendations Based on Model insights:
 
-1. Target High-Risk Customers
-   Customers with:
-    Low tenure,
-    Low product usage, and
-    Inactive accounts
-  should receive retention offers.
+1. Target High-Risk Customers:
+   
+   Customers with Low tenure, Low product usage, and Inactive accounts should receive retention offers.
 
-2. Improve Customer Engagement
+2. Improve Customer Engagement:
+   
    Inactive members show higher churn probability.
 
-   Recommended actions:
-    Personalized marketing, and 
-    Loyalty rewards
+   Recommended actions: Personalized marketing, and Loyalty rewards
 
-4. Promote Multi-Product Usage
-   Customers using more products churn less.
+3. Promote Multi-Product Usage:
+
+    Customers using more products churn less.
    
-   Recommended actions:
-    Cross-selling strategies, and 
-    Product bundling
+   Recommended actions: Cross-selling strategies, and Product bundling
 
-6. Monitor High Balance Customers
+4. Monitor High Balance Customers:
+   
    High-balance churners represent major financial risk.
    
-   Recommended actions:
-    Dedicated customer support, and
-    VIP services
---------------------------------------
+   Recommended actions:Dedicated customer support, and VIP services
+
+   --------------------------------------
 
 ### Technologies Used:
- Python
- Pandas
- NumPy
- Scikit-learn
- XGBoost
- SMOTE
- FastAPI
- Uvicorn
- Matplotlib
- Seaborn
+    
+    Python,
+    Pandas,
+    NumPy,
+    Scikit-learn,
+    XGBoost,
+    SMOTE,
+    FastAPI,
+    Uvicorn,
+    Matplotlib, and 
+    Seaborn
 --------------------------------------
 
 ### Key Results:
- Both Randon Forest and XGBoost models achieved highest ROC-AUC
  
- Improved churn detection performance
+ 1. Both Randon Forest and XGBoost models achieved highest ROC-AUC
  
- Enabled real-time predictions using API
+ 2. Improved churn detection performance
+ 
+ 3. Enabled real-time predictions using API
 
 --------------------------------------
 
 ### Future Improvements:
- Add SHAP model interpretability
  
- Deploy to cloud (AWS / Azure)
+ 1. Add SHAP model interpretability
  
- Build interactive dashboard
+ 2. Deploy to cloud (AWS / Azure)
  
- Automate retraining pipeline
+ 3. Build interactive dashboard
+ 
+ 4. Automate retraining pipeline
 
  ### 7. Model Deployment
 
-The final XGBoost model was deployed using:
-- FastAPI
-- Uvicorn server
-
-This enables real-time predictions through API calls.
+  The final XGBoost model was deployed using FastAPI, Uvicorn server.
+  This enables real-time predictions through API calls.
 
 --------------------------------------
 
