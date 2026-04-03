@@ -54,91 +54,63 @@ The dataset contains customer information including demographics, account activi
 ## Machine Learning Workflow
 
 ### 1. Data Preprocessing
-
-Purpose:
-
-Prepare raw data for modeling.
+Purpose: Prepare raw data for modeling.
 
 Steps:
-
 - Handling missing values
 - Encoding categorical variables
 - Feature scaling (if used)
 - Train-test split
-
-Benefit:
-
-Ensures models receive structured, machine-readable data.
+  
+Benefit: Ensures models receive structured, machine-readable data.
 
 --------------------------------------
 
 ### 2. Feature Engineering
-
-Purpose:
-
-Create new meaningful features to improve predictive power.
+Purpose: Create new meaningful features to improve predictive power.
 
 Engineered Features:
-
 - BalanceSalaryRatio
 - TenureAgeRatio
 
-Benefit:
-
-Enhances model performance and interpretability.
+Benefit: Enhances model performance and interpretability.
 
 --------------------------------------
 
 ### 3. Class Imbalance Handling
 
-Technique Used:
+Technique Used: SMOTE (Synthetic Minority Oversampling Technique)
 
-- SMOTE (Synthetic Minority Oversampling Technique)
+Purpose: Balance churn vs non-churn classes.
 
-Purpose:
-
-Balance churn vs non-churn classes.
-
-Benefit:
-
-Improves recall for churn predictions.
+Benefit: Improves recall for churn predictions.
 
 --------------------------------------
 
 ### 4. Model Training
 
 Models Used:
-
 - Logistic Regression
 - Random Forest
 - XGBoost (Best Performing)
 
-Purpose:
-
-Compare different algorithms to identify the most accurate model.
+Purpose: Compare different algorithms to identify the most accurate model.
 
 --------------------------------------
 
 ### 5. Hyperparameter Tuning
 
-Technique:
+Technique: GridSearchCV
 
-- GridSearchCV
+Purpose: Optimize model parameters for best performance.
 
-Purpose:
-
-Optimize model parameters for best performance.
-
-Benefit:
-
-Improves prediction accuracy and generalization.
+Benefit: Improves prediction accuracy and generalization.
 
 --------------------------------------
 
 ### 6. Model Evaluation
 
 Metrics Used:
-
 - Accuracy
 - Precision
 - Recall
@@ -147,20 +119,16 @@ Metrics Used:
 
 ROC-AUC was used as the primary evaluation metric.
 
-Why ROC-AUC?
-
-Because churn prediction is an imbalanced classification problem.
+Why ROC-AUC? Because churn prediction is an imbalanced classification problem.
 
 ### ROC Curve Analysis
 
 Receiver Operating Characteristic (ROC) curve is used to evaluate the classification performance of the churn prediction model across different thresholds.
+A higher Area Under Curve (AUC) indicates better model performance.
 
 The ROC curve plots:
-
 - True Positive Rate (Recall)
 - False Positive Rate
-
-A higher Area Under Curve (AUC) indicates better model performance.
 
 ### ROC Curve – XGBoost Model
 
@@ -172,9 +140,7 @@ A higher Area Under Curve (AUC) indicates better model performance.
 - This indicates the model performs better than random guessing.
 - The model demonstrates strong ability to distinguish between churned and retained customers.
 
-Business Impact:
-
-A high ROC-AUC score ensures reliable identification of customers likely to churn, enabling early intervention strategies.
+Business Impact: A high ROC-AUC score ensures reliable identification of customers likely to churn, enabling early intervention strategies.
 
 ### Feature Importance 
 
@@ -190,29 +156,31 @@ A high ROC-AUC score ensures reliable identification of customers likely to chur
 
 1. Target High-Risk Customers
    Customers with:
-    Low tenure
-    Low product usage
+    Low tenure,
+    Low product usage, and
     Inactive accounts
   should receive retention offers.
 
 2. Improve Customer Engagement
    Inactive members show higher churn probability.
+
    Recommended actions:
-    Personalized marketing
+    Personalized marketing, and 
     Loyalty rewards
 
-3. Promote Multi-Product Usage
+4. Promote Multi-Product Usage
    Customers using more products churn less.
+   
    Recommended actions:
-    Cross-selling strategies
+    Cross-selling strategies, and 
     Product bundling
 
-4. Monitor High Balance Customers
+6. Monitor High Balance Customers
    High-balance churners represent major financial risk.
+   
    Recommended actions:
-    Dedicated customer support
+    Dedicated customer support, and
     VIP services
-
 --------------------------------------
 
 ### Technologies Used:
@@ -226,26 +194,29 @@ A high ROC-AUC score ensures reliable identification of customers likely to chur
  Uvicorn
  Matplotlib
  Seaborn
-
 --------------------------------------
 
 ### Key Results:
  Both Randon Forest and XGBoost models achieved highest ROC-AUC
+ 
  Improved churn detection performance
+ 
  Enabled real-time predictions using API
 
 --------------------------------------
 
 ### Future Improvements:
  Add SHAP model interpretability
+ 
  Deploy to cloud (AWS / Azure)
+ 
  Build interactive dashboard
+ 
  Automate retraining pipeline
 
  ### 7. Model Deployment
 
 The final XGBoost model was deployed using:
-
 - FastAPI
 - Uvicorn server
 
